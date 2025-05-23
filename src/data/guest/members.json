@@ -1,0 +1,22 @@
+[
+    { "id": "1", 
+    "name": "John Doe", 
+    "email": "johndoe@example.com", 
+    "loyalty": "Gold" },
+    { "id": "2", 
+    "name": "Jane Smith", 
+    "email": "janesmith@example.com", 
+    "loyalty": "Silver" },
+    { "id": "3", 
+    "name": "Alice Johnson", 
+    "email": "alicejohnson@example.com", 
+    "loyalty": "Platinum" },
+    { "id": "4", 
+    "name": "Bob Brown", 
+    "email": "bobbrown@example.com", 
+    "loyalty": "Gold" },
+    { "id": "5", 
+    "name": "Charlie White", 
+    "email": "charliewhite@example.com", 
+    "loyalty": "Silver" }
+  ]
