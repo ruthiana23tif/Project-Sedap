@@ -2,7 +2,7 @@ import { AiOutlineUserAdd } from "react-icons/ai";
 import { FaBan, FaLock, FaQuestionCircle } from "react-icons/fa"; 
 import { BsPeopleFill } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdFastfood } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 
 
@@ -48,6 +48,12 @@ const menus = [
     to: "/error403", 
     name: "Error 403",
     icon: <FaQuestionCircle className="mr-4 text-xl" />,
+  },
+  {
+    id: 8,
+    to: "/products", 
+    name: "Products",
+    icon: <MdFastfood className="mr-4 text-xl" />,
   },
 ];
 const menuClass = ({ isActive }) =>

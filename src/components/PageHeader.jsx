@@ -22,6 +22,8 @@ export default function PageHeader() {
         return "Add Customer";
       case "/User":
         return "User";
+        case "/products":
+        return "Products";
       default:
         return "Page";
     }

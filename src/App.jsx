@@ -10,6 +10,7 @@ const Error403 = React.lazy(() => import("./pages/Error403"));
 import { Routes, Route } from "react-router-dom";
 import UserList from "./pages/UserList";
 import HeroSection from "./components/guest/HeroSection";
+import Products from "./pages/Products";
 const Loading = React.lazy(() => import("./components/Loading"));
 const AddCustomer = React.lazy(() => import("./pages/AddCustomer"));
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
@@ -19,6 +20,7 @@ const Homepage = React.lazy(() => import("./pages/guest/Homepage"));
 const Login = React.lazy(() => import("./pages/auth/Login"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/customers" element={<Customers />} />
           <Route path="/AddCustomer" element={<AddCustomer />} />
           <Route path="/user" element={<UserList />} />
+          <Route path="/products" element={<Products/>} />
+           <Route path="/products/:id" element={<ProductDetail />} /> 
         </Route>
         <Route path="/error401" element={<Error401 />} />
         <Route path="/error403" element={<Error403 />} />
