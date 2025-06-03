@@ -1,3 +1,4 @@
+import { CgNotes } from "react-icons/cg"; 
 import { AiOutlineUserAdd } from "react-icons/ai"; 
 import { FaBan, FaLock, FaQuestionCircle } from "react-icons/fa"; 
 import { BsPeopleFill } from "react-icons/bs";
@@ -54,6 +55,12 @@ const menus = [
     to: "/products", 
     name: "Products",
     icon: <MdFastfood className="mr-4 text-xl" />,
+  },
+  {
+    id: 9,
+    to: "/notes", 
+    name: "Notes",
+    icon: <CgNotes className="mr-4 text-xl" />,
   },
 ];
 const menuClass = ({ isActive }) =>
