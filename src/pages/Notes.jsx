@@ -57,7 +57,6 @@ export default function Notes() {
     }
   };
 
-
   const handleEditChange = (e) => {
     const { name, value } = e.target;
     setEditForm({ ...editForm, [name]: value });
@@ -77,14 +76,14 @@ export default function Notes() {
           note.id === editMode ? { ...note, ...editForm } : note
         )
       );
-      setEditMode(null);  // Exit edit mode
+      setEditMode(null); // Exit edit mode
     }, 1000);
   };
 
   const handleCancel = () => {
     setEditMode(null);
-    setEditForm({ title: '', content: '' });
-  }; 
+    setEditForm({ title: "", content: "" });
+  };
 
   // Handle untuk aksi hapus data
   const handleDelete = async (id) => {
@@ -151,53 +150,51 @@ export default function Notes() {
 
       {success && <AlertBox type="success">{success}</AlertBox>}
 
-      {/* Form Card */}
-      {/* Form Card */}
-{!editMode && (
-  <div className="bg-white rounded-2xl shadow-lg p-6">
-    <h3 className="text-lg font-semibold text-gray-800 mb-4">
-      Tambah Catatan Baru
-    </h3>
+      {!editMode && (
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            Tambah Catatan Baru
+          </h3>
 
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <input
-        type="text"
-        name="title"
-        value={dataForm.title}
-        disabled={loading}
-        placeholder="Judul catatan"
-        onChange={handleChange}
-        required
-        className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="title"
+              value={dataForm.title}
+              disabled={loading}
+              placeholder="Judul catatan"
+              onChange={handleChange}
+              required
+              className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none
                     focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all
                     duration-200"
-      />
+            />
 
-      <textarea
-        name="content"
-        value={dataForm.content}
-        placeholder="Isi catatan"
-        onChange={handleChange}
-        disabled={loading}
-        required
-        rows="2"
-        className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none
+            <textarea
+              name="content"
+              value={dataForm.content}
+              placeholder="Isi catatan"
+              onChange={handleChange}
+              disabled={loading}
+              required
+              rows="2"
+              className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none
                     focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all
                     duration-200 resize-none"
-      />
+            />
 
-      <button
-        type="submit"
-        className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold
+            <button
+              type="submit"
+              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold
                     rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500
                     focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed
                     transition-all duration-200 shadow-lg"
-      >
-        {loading ? "Mohon Tunggu..." : "Tambah Data"}
-      </button>
-    </form>
-  </div>
-)}
+            >
+              {loading ? "Mohon Tunggu..." : "Tambah Data"}
+            </button>
+          </form>
+        </div>
+      )}
 
       {/* Notes Table */}
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden mt-10">
